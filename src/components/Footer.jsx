@@ -9,7 +9,7 @@ function Footer() {
                 <img src={Logo} alt="logo" className="h-[40px]" />
                 <p className="w-8/12 text-center md:text-left">Dsgnr. is an award winning creative and design agency 
                 based in New York, USA.</p>
-                <div className="border-2 border-yellow-primary grid grid-cols-4 p-4 w-60">
+                <div className="border-2 border-yellow-primary-darker grid grid-cols-4 p-4 w-60">
                     <EmailIcon />
                     <p className="font-bold col-span-3">info@dsgnr.com</p>
                 </div>

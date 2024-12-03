@@ -1,5 +1,6 @@
 import React from "react";
 import HeroSectionBg from "../../assets/hero-section-home-bg.png";
+import { Link } from "react-router-dom";
 
 function HeroSection() {
   return (
