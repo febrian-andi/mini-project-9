@@ -1,8 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ArticleCard from "./ArticleCard";
+import { useFetchData } from "../hooks/useFetchData";
 
 function ArticleList({ page = "" }) {
+  const { data: articles, error, loading } = useFetchData("/blogs");
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
+  if (!articles || !articles.data.length === 0) return <p>No data found</p>;
+
   return (
     <section className="py-20 px-6 md:px-12">
       <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 mb-12">
@@ -18,9 +24,9 @@ function ArticleList({ page = "" }) {
         )}
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 md:gap-x-12 gap-y-6">
-        <ArticleCard />
-        <ArticleCard />
-        <ArticleCard />
+        {articles.data.map((article) => (
+          <ArticleCard key={article.id} article={article} />
+        ))}
       </div>
       {page !== "home" && (
         <div className="flex justify-center mt-12">

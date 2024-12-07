@@ -6,7 +6,7 @@ function BlogDetailPage() {
   return (
     <>
       <HeroSection title="We write article with love." handsImage="three" />
-      <Detail title={"Blog Title"} />
+      <Detail urlApi="blogs"/>
     </>
   );
 }

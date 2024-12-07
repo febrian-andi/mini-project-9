@@ -26,7 +26,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactUsPage />} />
           <Route path="/blogs" element={<Blogs />} />
-          <Route path="/blogs/detail" element={<BlogDetailPage />} />
+          <Route path="/blogs/:id" element={<BlogDetailPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <Banner />

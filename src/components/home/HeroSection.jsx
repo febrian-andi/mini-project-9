@@ -8,7 +8,7 @@ function HeroSection() {
       <img
         src={HeroSectionBg}
         alt="hero section background"
-        className="w-full object-cover h-[90vh] xl:h-full"
+        className="w-full object-cover xl:h-full"
       />
       <div className="absolute inset-0 left-[45%] top-1/2 transform -translate-x-1/2 -translate-y-1/2">
         <h1 className="text-7xl font-bold">
