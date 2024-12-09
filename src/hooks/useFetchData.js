@@ -2,12 +2,13 @@ import useSWR from "swr";
 import axios from "axios";
 
 const API_URL = import.meta.env.VITE_API_BASE_URL;
+const API_KEY = import.meta.env.VITE_API_KEY;
 
 const fetcher = (url) =>
   axios
     .get(url, {
       headers: {
-        "x-api-key": "24d3b044-27de-412e-bfb1-e1bf2441534c",
+        "x-api-key": API_KEY,
       },
     })
     .then((res) => res.data);

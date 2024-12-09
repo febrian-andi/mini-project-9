@@ -6,7 +6,7 @@ function OurWorksDetailPage() {
   return (
     <>
       <HeroSection title="We work with love." handsImage="three" />
-      <Detail title={"Portfolio Title"}/>
+      <Detail urlApi="portfolios"/>
     </>
   );
 }

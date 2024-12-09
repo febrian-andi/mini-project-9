@@ -1,22 +1,22 @@
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import React from "react";
 
-function TeamCard() {
+function TeamCard({ team }) {
   return (
     <div>
       <div className="bg-white shadow-md p-4">
         <img
-          src="https://picsum.photos/200/200"
+          src={team.photo}
           alt="team member"
           className="w-full h-[300px] sm:h-[400px] object-cover"
         />
         <div className="my-6 space-y-2">
-          <h3 className="font-bold text-2xl">John Doe</h3>
-          <p className="text-gray-500">CEO</p>
+          <h3 className="font-bold text-2xl">{team.name}</h3>
+          <p className="text-gray-500">{team.title}</p>
         </div>
         <div className="flex flex-row space-x-8">
           <a
-            herf="#"
+            herf={team.ig_url}
             rel="noopener noreferrer"
             className="text-gray-500 font-semibold cursor-pointer"
           >
@@ -24,7 +24,7 @@ function TeamCard() {
             <ArrowUpRightIcon className="h-4 w-4 inline-block ml-2" />
           </a>
           <a
-            herf="#"
+            herf={team.linkedin_url}
             rel="noopener noreferrer"
             className="text-gray-500 font-semibold cursor-pointer"
           >

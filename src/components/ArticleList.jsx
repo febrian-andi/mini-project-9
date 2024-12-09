@@ -24,8 +24,8 @@ function ArticleList({ page = "" }) {
         )}
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 md:gap-x-12 gap-y-6">
-        {articles.data.map((article) => (
-          <ArticleCard key={article.id} article={article} />
+        {articles.data.map((article, index) => (
+          <ArticleCard key={index} article={article} />
         ))}
       </div>
       {page !== "home" && (

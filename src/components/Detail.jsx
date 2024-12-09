@@ -5,6 +5,14 @@ import { useFetchData } from "../hooks/useFetchData";
 function Detail({ urlApi }) {
   const id = useParams().id;
   const { data, loading, error } = useFetchData(`/${urlApi}/${id}`);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
   
   return (
     <div className="py-20 px-6 md:px-28">
